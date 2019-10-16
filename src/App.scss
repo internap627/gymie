@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+
+.App {
+  background: url('./assets/bluewall2.jpg');
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo {
+  padding-top: 30rem;
+  align-items: center;
+  color: white;
+  font-size: 8rem;
+  font-weight: bold;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  text-align: center;
+  opacity: 1;
+  animation: fade 6s linear;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}

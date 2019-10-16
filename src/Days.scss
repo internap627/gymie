@@ -1,0 +1,106 @@
+$brickblue: #6a7c95;
+
+.DaysGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#daysinfo {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #000;
+}
+
+.WeekGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 65vh;
+  opacity: 0;
+  animation: CardAnimation;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+.Day {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 15px;
+  padding: 0 1rem;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.DayCardInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    padding: 0 2rem;
+
+    h1 {
+      font-size: 4rem;
+      color: $brickblue;
+      text-shadow: 0 0 1px #000;
+    }
+}
+
+.TrainerCardDays {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+  border-radius: 20px;
+  width: 75%;
+  height: 350px;
+  border: solid white 5px;
+  margin-bottom: 2rem;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .Home {
+    margin: 20px;
+    align-self: flex-start;
+    img {
+      position: relative;
+      width: 130px;
+      height: 130px;
+    }
+  }
+}
+
+@keyframes CardAnimation {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
