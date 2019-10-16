@@ -5,12 +5,12 @@ import pt01 from './assets/pt01.png';
 import tick from './assets/tick.png';
 import cross from './assets/cross02.png';
 import coffee from './assets/coffee.png';
-import gym from './assets/gym01.png';
+import gym from './assets/gym02.png';
 
 export default function Days({ handleDays }) {
   const [stateString, setString] = useState('days');
-  const handleClick = () => {
-    setString('book');
+  const handleBook = () => {
+    stateString === 'days' ? setString('book') : setString('days');
   }
   return (
     <Fragment>
@@ -26,7 +26,7 @@ export default function Days({ handleDays }) {
             </div>
           </div>
           <div className='WeekGroup'>
-            <div className='Day' onClick={handleClick}>
+            <div className='Day' onClick={handleBook}>
               <h1>Monday</h1>
               <img src={tick} alt='available sign' />
             </div>
@@ -48,7 +48,7 @@ export default function Days({ handleDays }) {
             </div>
           </div>
       </div> : ''}
-      {stateString === 'book' ? <Book /> : ''}
+      {stateString === 'book' ? <Book handleBook={handleBook} /> : ''}
     </Fragment>
   )
 }

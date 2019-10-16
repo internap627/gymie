@@ -12,9 +12,8 @@ $grey: #abadb1;
 .BookCard {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: relative;
-  display: flex;
   // border-radius: 20px;
   width: 100%;
   height: 350px;
@@ -26,19 +25,36 @@ $grey: #abadb1;
     height: 100%;
   }
 
+  .Home {
+    margin: 15px 100px;
+    align-self: flex-start;
+    opacity: 0;
+    animation: CardAnimation;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    img {
+      position: relative;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
   .CardInfo {
-    width: 100%;
+    // width: 100%;
     height: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     z-index: 100;
     padding: 0 2rem;
 
     h1 {
       font-size: 3.5rem;
       color: white;
-      text-shadow: 0 0 1px #000;;
+      text-shadow: 0 0 9px #000;;
     }
   }
 }

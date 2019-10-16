@@ -1,13 +1,17 @@
 import React from 'react';
 import './Book.scss';
 import kate01 from './assets/kate01.png';
+import gym from './assets/gym02.png';
 
 
-export default function Book() {
+export default function Book({ handleBook }) {
   return (
     <div className='BookGroup'>
       <div className='BookCard'>
         <img src={kate01} alt='female trainer' />
+        <div className='Home' onClick={handleBook}>
+              <img src={gym} alt='home button' />
+            </div>
         <div className='CardInfo'>
             <h1>Monday</h1>
             <h1>15 Exercises</h1>

@@ -85,6 +85,12 @@ $brickblue: #6a7c95;
   .Home {
     margin: 20px;
     align-self: flex-start;
+    opacity: 0;
+    animation: CardAnimation;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
     img {
       position: relative;
       width: 130px;
