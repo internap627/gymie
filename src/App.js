@@ -11,8 +11,8 @@ function App() {
   })
   return (
     <div className="App">
-      {stateString === 'logo' ? <div className='logo'>Gymie</div> : ''}
-      {stateString === 'trainers' ? <Trainers /> : ''}
+      {stateString === 'logo' ? <div className='logo'>Gymie</div> : <Trainers />}
+      {/* {stateString === 'trainers' ? <Trainers /> : ''} */}
     </div>
   );
 }
